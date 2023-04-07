@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image"
+            android:textColor="#FFC107"
+            android:textSize="30sp"
+            android:id="@+id/i1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/font2"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:id="@+id/x"
+            android:layout_marginTop="5dp"
+            android:textColor="#F44336"
+            android:layout_toRightOf="@id/i1"
+            android:textSize="40sp"
+            android:fontFamily="@font/font1"
+           />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/igm12"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/i1"
+        android:id="@+id/edtlyt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:elevation="500dp"
+        android:hint=" Search Your Category"
+        app:boxStrokeWidth="0dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColorHint="@drawable/selector"
+            android:focusable="true"
+            android:drawableRight="@drawable/ic_baseline_mic"
+            android:id="@+id/searchitem"
+            android:gravity="center"
+            android:background="@drawable/signupround"
+            android:backgroundTint="#4BAAA8A8"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/gridlyt"
+        android:layout_below="@id/edtlyt"
+        android:rowCount="5"
+        android:columnCount="2">
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="90dp"
+            app:cardCornerRadius="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/card1"
+            android:layout_row="0"
+            android:layout_column="0"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/cardbg"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Random"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="90dp"
+            app:cardCornerRadius="17dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:backgroundTint="#FFC107">
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/card2"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Nature"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="90dp"
+            app:cardCornerRadius="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:backgroundTint="#2196F3">
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/card3"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ACA8A8"
+                android:text="Travel"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="90dp"
+            app:cardCornerRadius="17dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:backgroundTint="#2196F3">
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/card4"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Animals"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idRVItems"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/gridlyt"
+            android:background="#fff" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+           android:layout_below="@id/idRVItems"
+            android:background="#fff" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/viewpager"
+        android:layout_marginBottom="100dp"
+        android:layout_below="@id/recycler2"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/viewpager"
+            android:background="#fff" />
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>
